@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-gb" lang="en-gb" >
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<link type="text/css" href="http://46.137.72.251/facebook/gohotelsgo/bali_island_villas_spa/css/style.css" rel="stylesheet" >
+</head>
+<body>
+	<div class="left">
+		<div><img alt="" src="http://46.137.72.251/facebook/gohotelsgo/bali_island_villas_spa/images/phont.jpg" /></div>
+		<div><a target="_blank" href="http://www.islandvillasbali.com/mainpage.php">Bali Island Villas & Spa</a></div>
+	</div>
+	<div class="right">
+		<div>
+			<iframe src="https://gc.synxis.com/rez.aspx?Hotel=24910&Chain=9005&start=teaser" width="185" height="220" frameborder="0" scrolling="no"></iframe>
+		</div>
+		<div>
+			<a target="_blank" href="http://www.islandvillasbali.com/mainpage.php?page=includes/specialoffer.inc.php">Special offer</a>
+		</div>
+	</div>
+</body>
+</html>
