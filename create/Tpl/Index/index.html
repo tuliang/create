@@ -6,7 +6,7 @@
 <title></title>
 </head>
 <body>
-<form action="index.php?m=Index&a=createHotelCode" method="post" name="post" id="post">
+<form action="index.php?m=Index&a=createHotelCode" method="post" name="post" id="post" enctype="multipart/form-data">
 	<ul>
 		<li>酒店名称：<input type="text" name="hotel_name"></li>
 		<li>左边链接：<input type="text" name="left_link"></li>
@@ -14,6 +14,7 @@
 		<li>右边链接：<input type="text" name="right_link"></li>
 		<li>右边文本：<input type="text" name="right_text"></li>
 		<li>iframe链接：<input type="text" name="iframe_link"></li>
+		<!-- <li>选择图片：<input type="file" name="files[]"/></li> -->
 	</ul>	
 	<input type="submit" value="提交">
 </form>
