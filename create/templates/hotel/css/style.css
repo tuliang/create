@@ -7,27 +7,35 @@
 	float: left;
 	margin: 0 1px 10px 0;
 }
-.left div a{
+.left div.text{
 	text-decoration: none;
 	text-align: center;
 	background: url("../images/left_button.png") no-repeat;
 	width: 191px;;
 	height: 45px;
-	display: block;
 	font-size: 12px;
-	padding:5px 5px 0 0;
+	line-height: 45px;
+}
+.left div.text a{
+	display: block;
+	width: 185px;
+	height: 45px;
 }
 .right{
 	float: left;
 	margin: 0 0 10px 0;
 }
-.right div a{
+.right div.text{
 	text-decoration: none;
 	text-align: center;
 	background: url("../images/right_button.png") no-repeat;
 	width: 185px;
 	height: 45px;
-	display: block;
 	font-size: 12px;
-	padding:5px 5px 0 0;
+	line-height: 45px;
+}
+.right div.text a{
+	display: block;
+	width: 185px;
+	height: 45px;
 }
