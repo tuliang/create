@@ -25,8 +25,6 @@ class IndexAction extends Action {
     	foreach ($post as $key=>$item){
     		$text = str_replace('{'.$key.'}', $item, $text);
     	}   	 
-    	//exit;
-    	
     	 
     	//定义模板生成地址
     	define('CREATE_PATH', './result/'.$post['hotel_name'].'/');
@@ -35,6 +33,13 @@ class IndexAction extends Action {
     	//创建文件
     	file_put_contents(CREATE_PATH.'index.html', $text);
     	file_put_contents(CREATE_PATH.$post['hotel_name'].'txt', $text);
+    	
+    	//创建其他文件
+    	mkdir(CREATE_PATH.'css/', 0777, true);
+    	file_put_contents(CREATE_PATH.'css/style.css', file_get_contents(TPL_PATH.'css/style.css'));
+    	mkdir(CREATE_PATH.'images/', 0777, true);
+    	file_put_contents(CREATE_PATH.'images/left_button.png', file_get_contents(TPL_PATH.'images/left_button.png'));
+    	file_put_contents(CREATE_PATH.'images/right_button.png', file_get_contents(TPL_PATH.'images/right_button.png'));
     	
     	$this->success('创建成功', '__URL__/index');
     }
