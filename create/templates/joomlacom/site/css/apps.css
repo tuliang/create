@@ -1,0 +1,111 @@
+@CHARSET "UTF-8";
+.applist{
+	color:#fff;
+	font-size:12px;
+	border-left:1px solid #7a004e;
+	height:398px;
+	padding: 4px 0;
+}
+.applist .search{
+	height:25px;
+	width:233px;
+	padding-left:8px;
+	background:url('../images/head.png');
+}
+
+.left{
+	float: left;
+}
+.search .left{
+	padding:3px 0;
+}
+.search .input{
+	padding:0px;
+}
+.right{
+	float:right;
+}
+.clr{
+	clear: both;
+}
+.applist .separate{
+    border-left: 1px dashed #FFFFFF;
+    height: 17px;
+    padding-right:4px;
+}
+.search .input{
+	position: relative
+}
+.search .input img{
+    left: 125px;
+    position: absolute;
+    top: 5px;
+	cursor:	pointer;
+	width: 11px;
+	height: 13px;
+}
+.search .droplist{
+	padding:0 4px;
+}
+
+.search #search{
+	color:#714654;
+	width:137px;
+	height:25px;
+	margin:0px;
+	padding:0px;
+	padding-left:4px;
+	border: 0;
+	background-image:url('../images/search.png'); 
+}
+.apps{
+	width:241px;
+	height:376px;
+}
+.app{
+	padding: 8px 0 0 3px;
+	height: 55px;
+	background: url('../images/line.png') no-repeat bottom;
+}
+.app .img{
+	float: left;
+}
+.app .details{
+	float: left;
+	width: 145px;
+	margin: 0 0 0 5px;
+}
+.app .details .title a{
+	font-size: 12px;
+	color: #fff;
+}
+.app .details .text{
+	font-size: 10px;
+	color: #f892aa;
+}
+.app .favicons{
+	float: left;
+}
+.app .favicons img{
+	margin: 8px 0 0 10px;
+}
+#more{
+	width: 240px;
+	height: 25px;
+	background: url("../images/more.png") no-repeat;
+	text-align: center;
+	line-height: 25px;
+}
+#more a{
+	width: 240px;
+	height: 25px;
+	color: #fff;
+	display: block;	
+}
+#clr_list{
+	clear: both;
+}
+.app .img a img{
+	width:39px;
+	height:39px;
+}

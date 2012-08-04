@@ -1,0 +1,126 @@
+@CHARSET "UTF-8";
+.details{
+	width: 320px;
+	height:398px;
+}
+.app_top{
+	height: 55px;
+}
+.app_top .img{
+	float: left;
+	margin: 5px 0 0 15px;
+}
+.app_top .title{
+	font-size: 11px;
+	color: #fff;
+	float: left;
+	margin: 10px 0 0 15px;
+}
+.app_top .title .score{
+	margin: 8px 0 0 0;
+}
+.app_top .title .score #grade a img{
+	display:block;
+}
+.app_top .title .score #grade a {
+	float:left;
+}
+.app_top .app_button{
+	color: #450b31;
+	float: right;
+	margin: 5px 20px 0 0;
+}
+.app_top .app_button .favicon{
+	margin: 5px 0 0 0;
+}
+.briefing{
+	margin: 3px 0 0 10px;
+	width: 290px;
+}
+.briefing .app_content{
+	color: #d77a94;
+	font-size: 10px;
+	margin: 1px 0 0 3px;
+	text-indent: 20px;
+	line-height: 14px;
+}
+.app_slide{
+	margin: 3px 0 0 10px;
+}
+.app_comment{
+	margin: 4px 0 0 10px;
+	width: 300px;
+}
+.app_comment #comment_text{
+	background: url('../images/comment_text.png') no-repeat;
+	border: 0 none;
+	color: #fff;
+	width: 293px;
+	height: 25px;
+	line-height: 25px;
+	text-indent: 10px;
+}
+.app_comment .comment_text{
+	margin: 1px 0 0 5px;
+}
+.app_comment .comment_button{
+	float: right;
+	margin: 1px 0 0 0;
+}
+.commentlist{
+	color: #d77a94;
+	font-size: 10px;
+	margin: 0 0 0 20px;
+	width: 285px;
+}
+.commentlist .comment_item{
+	padding: 0 0 10px 0;
+	background: url('../images/comment_item.png') no-repeat bottom;
+}
+.comment_item span{
+	padding-right:10px;
+}
+
+.slide { 
+	width:320px; 
+	overflow:hidden; 
+	position:relative;
+}
+#small_frame { 
+	width:250px; 
+	height:90px; 
+	margin-left:22px;
+	overflow:hidden;
+	float:left;
+}
+#small_frame .list{
+	width: 1000px;
+}
+#small_frame .list li{
+	margin: 0 5px 0 0;
+	float: left;
+}
+#back{
+	height:16px;
+	width:16px;
+	display:block;
+	float:left; 
+	margin-top:40px; 
+	background:url(../images/left.png) no-repeat; 
+	position:absolute; 
+	left:7px;
+}
+#forward{
+	height:16px;
+	width:16px;
+	display:block;
+	float:left; 
+	margin-top:40px; 
+	background:url(../images/right.png) no-repeat; 
+	position:absolute; 
+	left:270px;
+}
+.details .app_top .img img{
+	width:39px;
+	height:39px;
+}

@@ -1,0 +1,14 @@
+@CHARSET "UTF-8";
+	
+.huandingpiantupian img{
+    height: 100px;
+    width: 100px;
+}
+.huandingpiantupian img, .huandingpiantupian input{
+	float:none;
+}
+.huandingpiantupian .slide_img {
+	float:left;
+	width:106px;
+	height:134px;
+}

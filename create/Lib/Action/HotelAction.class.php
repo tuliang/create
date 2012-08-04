@@ -10,22 +10,11 @@ class HotelAction extends BaselAction {
 			$post['hotel_name'] = str_replace(' ', '_', strtolower($post['hotel_name']));
 			//定义模板地址
 			define('TPL_PATH', APP_PATH.'templates/hotel/');
-			//读取模板
-			$text = file_get_contents(TPL_PATH.'index.html');
-		
-			//替换文本
-			foreach ($post as $key=>$item){
-				$text = str_replace('{'.$key.'}', $item, $text);
-			}
-		
 			//定义模板生成地址
 			define('CREATE_PATH', APP_PATH.'result/HotelCode/'.$post['hotel_name'].'/');
-		
-			//创建目录
-			mkdir(CREATE_PATH, 0777, true);
-			//创建文件
-			file_put_contents(CREATE_PATH.'index.html', $text);
-			file_put_contents(CREATE_PATH.$post['hotel_name'].'txt', $text);
+			
+			$this->createFile(TPL_PATH.'index.html', $post, CREATE_PATH, 'index.html');
+			$this->createFile(TPL_PATH.'index.html', $post, CREATE_PATH, $post['hotel_name'].'txt');
 			 
 			//创建其他文件
 			mkdir(CREATE_PATH.'css/', 0777, true);
@@ -40,14 +29,6 @@ class HotelAction extends BaselAction {
 		}else{
 			$this->error('创建失败', '__URL__/index');
 		}
-	}
-	
-	//清理POST中的无关值
-	private function cleanPostValue(){
-	
-		unset($_POST['__hash__']);
-	
-		return $_POST;
 	}
 	
 	//上传图片
