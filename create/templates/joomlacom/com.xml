@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="component" version="1.5" method="upgrade">
+	<name>{com_name}</name>
+	<description>{com_name}</description>
+
+	<files folder="site">	
+		<filename>{com_name}.php</filename>
+		<filename>controller.php</filename>		
+		<filename>index.html</filename>	
+		<folder>models</folder>
+		<folder>views</folder>	
+	</files>
+	
+	<administration>
+		<menu>{com_name}</menu>
+
+		<files folder="admin">
+			<filename>{com_name}.php</filename>	
+			<filename>controller.php</filename>
+			<filename>index.html</filename>							
+			<folder>models</folder>
+			<folder>views</folder>
+		</files> 
+	</administration>
+</install>

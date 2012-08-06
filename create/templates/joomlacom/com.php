@@ -1,7 +1,4 @@
 <?php
-/*
- * 组件控制
- */
 defined( '_JEXEC' ) or die( 'Restricted access' );
 
 require_once( JPATH_COMPONENT.DS.'controller.php' );
@@ -17,7 +14,7 @@ if($controller = JRequest::getWord('controller')) {
     }
 }
 
-$classname = 'AppController'.$controller;
+$classname = '{com_name}Controller'.$controller;
 $controller = new $classname( );
 $controller->execute( JRequest::getWord( 'task' ) );
 $controller->redirect();

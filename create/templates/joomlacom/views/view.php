@@ -3,13 +3,12 @@ defined('_JEXEC') or die( 'Restricted access' );
 
 jimport( 'joomla.application.component.view');
 
-class AppViewCategory extends JView{
+class {com_name}View{view_name} extends JView{
 	
-	function display($tpl = null){	
+	function display($tpl = null){
+		
 		$model =& $this->getModel();
 		
-		$this->detail = $model->getDetail();
-        
 		parent::display($tpl);
 	}
 }
