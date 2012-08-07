@@ -14,7 +14,7 @@ class HotelAction extends BaselAction {
 			define('CREATE_PATH', APP_PATH.'result/HotelCode/'.$post['hotel_name'].'/');
 			
 			$this->createFile(TPL_PATH.'index.html', $post, CREATE_PATH, 'index.html');
-			$this->createFile(TPL_PATH.'index.html', $post, CREATE_PATH, $post['hotel_name'].'txt');
+			$this->createFile(TPL_PATH.'index.html', $post, CREATE_PATH, $post['hotel_name'].'.txt');
 			 
 			//创建其他文件
 			mkdir(CREATE_PATH.'css/', 0777, true);
