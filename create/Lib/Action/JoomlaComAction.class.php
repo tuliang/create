@@ -3,6 +3,7 @@ class JoomlaComAction extends BaselAction {
     
 	public function createCode(){
 		if (!empty($_POST)) {
+			
 			//定义模板地址
 			define('TPL_PATH', APP_PATH.'templates/joomlacom/');
 			
@@ -47,7 +48,12 @@ class JoomlaComAction extends BaselAction {
 				$this->createFile(TPL_PATH.'views/default.xml', array('view_name'=>$ucf_name), CREATE_PATH.'site/views/'.$name.'/tmpl/', 'default.xml');
 			}
 			
-			$this->success('创建成功', '__URL__/index');
+			//ZIP打包
+			import("@.ORG.PHPZip");
+			$z = new PHPZip(); 
+			$z->ZipAndDownload(CREATE_PATH);
+			
+			//$this->success('创建成功', '__URL__/index');
 		}else{
 			$this->error('创建失败', '__URL__/index');
 		}
