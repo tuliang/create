@@ -1,20 +1,12 @@
 <?php
-defined( '_JEXEC' ) or die( 'Restricted access' );
+// no direct access
+defined('_JEXEC') or die;
 
-require_once( JPATH_COMPONENT.DS.'controller.php' );
+// No access check.
 
-if($controller = JRequest::getWord('controller')) {
+// Include dependancies
+jimport('joomla.application.component.controller');
 
-    $path = JPATH_COMPONENT.DS.'controllers'.DS.$controller.'.php';
-
-    if (file_exists($path)) {
-        require_once $path;
-    } else {
-        $controller = '';
-    }
-}
-
-$classname = '{com_name}Controller'.$controller;
-$controller = new $classname( );
-$controller->execute( JRequest::getWord( 'task' ) );
+$controller	= JController::getInstance('{com_name}');
+$controller->execute(JRequest::getCmd('task'));
 $controller->redirect();

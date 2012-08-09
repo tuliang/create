@@ -37,6 +37,7 @@ class JoomlaComAction extends BaselAction {
 		$this->createFile(TPL_PATH.'com.php', array('com_name'=>$ucf_com_name), CREATE_PATH.'admin/', $com_name.'.php');
 		$this->createFile(TPL_PATH.'controller.php', array('com_name'=>$ucf_com_name), CREATE_PATH.'admin/', 'controller.php');
 		$this->createFile(TPL_PATH.'index.html', array(), CREATE_PATH.'admin/', 'index.html');
+		$this->createFile(TPL_PATH.'index.html', array(), CREATE_PATH.'admin/controllers/' ,'index.html');
 		$this->createFile(TPL_PATH.'index.html', array(), CREATE_PATH.'admin/models/' ,'index.html');
 		
 		$adminlist = $this->strtokList($val['adminlist']);
@@ -45,6 +46,7 @@ class JoomlaComAction extends BaselAction {
 			$name = strtolower($item);
 			$ucf_name = $this->strtolowerThenUcfirst($item);
 		
+			$this->createFile(TPL_PATH.'controllers/controller.php', array('controll_name'=>$ucf_name, 'com_name'=>$ucf_com_name), CREATE_PATH.'admin/controllers/', $name.'.php');
 			$this->createFile(TPL_PATH.'models/model.php', array('mod_name'=>$ucf_name, 'com_name'=>$ucf_com_name), CREATE_PATH.'admin/models/', $name.'.php');
 			$this->createFile(TPL_PATH.'views/view.php', array('view_name'=>$ucf_name, 'com_name'=>$ucf_com_name), CREATE_PATH.'admin/views/'.$name.'/', 'view.html.php');
 			$this->createFile(TPL_PATH.'index.html', array(), CREATE_PATH.'admin/views/'.$name.'/', 'index.html');
@@ -58,6 +60,7 @@ class JoomlaComAction extends BaselAction {
 		$this->createFile(TPL_PATH.'com.php', array('com_name'=>$ucf_com_name), CREATE_PATH.'site/', $com_name.'.php');
 		$this->createFile(TPL_PATH.'controller.php', array('com_name'=>$ucf_com_name), CREATE_PATH.'site/', 'controller.php');
 		$this->createFile(TPL_PATH.'index.html', array(), CREATE_PATH.'site/', 'index.html');
+		$this->createFile(TPL_PATH.'index.html', array(), CREATE_PATH.'site/controllers/' ,'index.html');
 		$this->createFile(TPL_PATH.'index.html', array(), CREATE_PATH.'site/models/' ,'index.html');
 			
 		$sitelist = $this->strtokList($val['sitelist']);
@@ -66,6 +69,7 @@ class JoomlaComAction extends BaselAction {
 			$name = strtolower($item);
 			$ucf_name = $this->strtolowerThenUcfirst($item);
 		
+			$this->createFile(TPL_PATH.'controllers/controller.php', array('controll_name'=>$ucf_name, 'com_name'=>$ucf_com_name), CREATE_PATH.'site/controllers/', $name.'.php');
 			$this->createFile(TPL_PATH.'models/model.php', array('mod_name'=>$ucf_name, 'com_name'=>$ucf_com_name), CREATE_PATH.'site/models/', $name.'.php');
 			$this->createFile(TPL_PATH.'views/view.php', array('view_name'=>$ucf_name, 'com_name'=>$ucf_com_name), CREATE_PATH.'site/views/'.$name.'/', 'view.html.php');
 			$this->createFile(TPL_PATH.'index.html', array(), CREATE_PATH.'site/views/'.$name.'/', 'index.html');
