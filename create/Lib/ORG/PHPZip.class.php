@@ -182,7 +182,7 @@
         // $archive = new PHPZip();
         // $archive->ZipAndDownload("需压缩的文件所在目录");
         // ------------------------------------------------------ //
-        public function ZipAndDownload($dir)
+        public function ZipAndDownload($dir, $name)
         {
             if(@!function_exists('gzcompress')){ return; }
     
@@ -209,7 +209,8 @@
     
             @header('Content-Encoding: none');
             @header('Content-Type: application/zip');
-            @header('Content-Disposition: attachment ; filename=Farticle'.date("YmdHis", time()).'.zip');
+            //@header('Content-Disposition: attachment ; filename=Farticle'.date("YmdHis", time()).'.zip');
+            @header('Content-Disposition: attachment ; filename='.$name.'.zip');
             @header('Pragma: no-cache');
             @header('Expires: 0');
             print($out);
