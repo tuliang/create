@@ -50,7 +50,7 @@ class JoomlaComAction extends BaselAction {
 			$this->createFile(TPL_PATH.'models/model.php', array('mod_name'=>$ucf_name, 'com_name'=>$ucf_com_name), CREATE_PATH.'admin/models/', $name.'.php');
 			$this->createFile(TPL_PATH.'views/view.php', array('view_name'=>$ucf_name, 'com_name'=>$ucf_com_name), CREATE_PATH.'admin/views/'.$name.'/', 'view.html.php');
 			$this->createFile(TPL_PATH.'index.html', array(), CREATE_PATH.'admin/views/'.$name.'/', 'index.html');
-			$this->createFile(TPL_PATH.'views/default.php', array(), CREATE_PATH.'admin/views/'.$name.'/tmpl/', 'default.php');
+			$this->createFile(TPL_PATH.'views/default.php', array('com_name'=>$com_name), CREATE_PATH.'admin/views/'.$name.'/tmpl/', 'default.php');
 			$this->createFile(TPL_PATH.'index.html', array(), CREATE_PATH.'admin/views/'.$name.'/tmpl/', 'index.html');
 		}
 	}
@@ -73,7 +73,7 @@ class JoomlaComAction extends BaselAction {
 			$this->createFile(TPL_PATH.'models/model.php', array('mod_name'=>$ucf_name, 'com_name'=>$ucf_com_name), CREATE_PATH.'site/models/', $name.'.php');
 			$this->createFile(TPL_PATH.'views/view.php', array('view_name'=>$ucf_name, 'com_name'=>$ucf_com_name), CREATE_PATH.'site/views/'.$name.'/', 'view.html.php');
 			$this->createFile(TPL_PATH.'index.html', array(), CREATE_PATH.'site/views/'.$name.'/', 'index.html');
-			$this->createFile(TPL_PATH.'views/default.php', array(), CREATE_PATH.'site/views/'.$name.'/tmpl/', 'default.php');
+			$this->createFile(TPL_PATH.'views/default.php', array('com_name'=>$com_name), CREATE_PATH.'site/views/'.$name.'/tmpl/', 'default.php');
 			$this->createFile(TPL_PATH.'index.html', array(), CREATE_PATH.'site/views/'.$name.'/tmpl/', 'index.html');
 			$this->createFile(TPL_PATH.'views/default.xml', array('view_name'=>$ucf_name), CREATE_PATH.'site/views/'.$name.'/tmpl/', 'default.xml');
 		}
